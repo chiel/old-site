@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  docker-lint:
+    name: Lint Dockerfile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: docker://hadolint/hadolint:latest-debian
+        with:
+          entrypoint: hadolint
+          args: Dockerfile
