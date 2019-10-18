@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+env:
+  DOCKER_REPO: docker.pkg.github.com/chiel/site
+
+
 jobs:
   docker-lint:
     name: Lint Dockerfile
@@ -15,3 +19,21 @@ jobs:
         with:
           entrypoint: hadolint
           args: Dockerfile
+
+  docker-build:
+    name: Build Dockerfile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build the image
+        env:
+          DOCKER_BUILDKIT: 1
+        run: docker build -t $DOCKER_REPO/site:$GITHUB_SHA .
+      - name: Login to GPR
+        run: |
+          echo "${{ secrets.REGISTRY_TOKEN }}" | \
+          docker login docker.pkg.github.com \
+            -u "${{ secrets.REGISTRY_USER }}" \
+            --password-stdin
+      - name: Push image to GPR
+        run: docker push $DOCKER_REPO/site:$GITHUB_SHA
