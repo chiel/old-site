@@ -6,4 +6,4 @@ WORKDIR /opt/project
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY ./src /opt/project
+COPY ./public /opt/project
