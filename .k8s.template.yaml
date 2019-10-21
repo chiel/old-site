@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - dev.kunkels.me
-      secretName: dev-kunkels-me-tls
+        - kunkels.me
+      secretName: kunkels-me-tls
   rules:
-    - host: dev.kunkels.me
+    - host: kunkels.me
       http:
         paths:
           - backend:
