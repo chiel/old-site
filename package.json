@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "site",
+  "description": "kunkels.me",
+  "version": "0.0.0",
+  "repository": "chiel/site",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "yarn run develop",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
+    "react-transition-group": "^4.3.0"
+  },
+  "devDependencies": {
+    "gatsby": "^2.16.1"
+  }
+}

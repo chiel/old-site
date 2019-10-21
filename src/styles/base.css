@@ -1,0 +1,69 @@
+@value pink from './colors.css';
+
+html {
+	background: pink;
+	box-sizing: border-box;
+	color: #444;
+	font: 300 14px/28px merriweather, serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	background: #fff;
+}
+
+h1,
+h2,
+h3 {
+	margin: 36px 0 0;
+	font-family: ubuntu;
+	letter-spacing: -0.06em;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 27px;
+	letter-spacing: .2em;
+}
+
+h3 {
+	font-size: 21px;
+}
+
+p {
+	margin: 0;
+}
+
+p + p {
+	margin-top: 28px;
+}
+
+a {
+	color: #000;
+	transition: color .1s ease-out;
+}
+
+a:hover {
+	color: pink;
+}
+
+@media (min-width: 420px) {
+	html {
+		font-size: 18px;
+		line-height: 36px;
+	}
+
+	p + p {
+		margin-top: 36px;
+	}
+}
