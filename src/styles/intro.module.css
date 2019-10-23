@@ -6,8 +6,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
-	border-top: 4px solid pink;
+	height: calc(100vh - 4px);
 	border-bottom: 4px solid pink;
 	background: #fff;
 }
