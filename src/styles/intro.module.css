@@ -64,27 +64,6 @@
 	text-align: center;
 }
 
-.slideIn,
-.slideOut {
-	transition: transform .25s ease-out;
-}
-
-.slideIn {
-	transform: translate3d(0, 100%, 0);
-}
-
-.slideInActive {
-	transform: translate3d(0, 0, 0);
-}
-
-.slideOut {
-	transform: translate3d(0, 0, 0);
-}
-
-.slideOutActive {
-	transform: translate3d(0, -100%, 0);
-}
-
 @media (min-width: 420px) {
 	.content h1 {
 		font-size: 120px;
