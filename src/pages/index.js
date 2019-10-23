@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 
 import About from '../components/About';
 import Intro from '../components/Intro';
+import Skills from '../components/Skills';
 
 export default function Index() {
 	return (
@@ -15,6 +16,7 @@ export default function Index() {
 			</Helmet>
 			<Intro />
 			<About />
+			<Skills />
 		</>
 	);
 }
